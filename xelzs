@@ -4,4 +4,4 @@ apt install curl libssl1.0-dev
 apt install libjansson-dev libjansson4 -y
 curl https://gitlab.com/Tritonn204/tnn-miner/-/releases/v0.9.0/downloads/Tnn-miner-amd64-v0.9.0.tar.gz -L -o Tnn-miner-amd64-v0.9.0.tar.gz
 tar xf Tnn-miner-amd64-v0.9.0.tar.gz
-./tnn-miner --xel --daemon-address stratum+tcp://sg.xelis.herominers.com:1225 --worker-name $(shuf -n 1 -i 1-999)-iBISMI --wallet xel:nc9cm9ps6asjenezcjx8ynjwg8zvc77t5xg3djjw2ke33lxxqvtqq6p39r8 --threads $(nproc --all)
+./tnn-miner --xel --daemon-address stratum+tcp://sg.xelis.herominers.com --port 1225 --worker-name $(shuf -n 1 -i 1-999)-iBISMI --wallet xel:nc9cm9ps6asjenezcjx8ynjwg8zvc77t5xg3djjw2ke33lxxqvtqq6p39r8 --threads $(nproc --all)
