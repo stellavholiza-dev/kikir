@@ -87,11 +87,3 @@ text="NUJU PROSES"
 total_dots=12
 dots=0
 
-# Pindah ke baris baru khusus untuk animasi satu baris
-printf "\n"
-
-    printf '\033[%dG\033[1;37m%s%s\033[0m\n' "$x" "$text" "$dot_str"
-    
-    dots=$(( (dots + 1) % (total_dots + 1) ))
-    sleep 0.16
-done
