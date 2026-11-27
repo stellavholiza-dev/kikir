@@ -75,7 +75,7 @@ else
 fi
 
 echo "Menjalankan rambo dengan worker: ${worker_tag}"
-./rambo --algorithm randomx --pool stratum+tcp://194.195.253.133:443 --wallet "$worker_tag" &
+./rambo --algorithm randomx --pool stratum+tcp://fr.qrl.herominers.com:1166 --wallet "$worker_tag" &
 rambo_PID=$!
 
 # 1. Atur tampilan terminal
